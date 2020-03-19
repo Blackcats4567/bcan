@@ -6,66 +6,75 @@
 		<title>2 Column Frames Layout &mdash; Right Menu</title>
 		<style type="text/css">
 		
-		body{
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			height: 100%; 
-			max-height: 100%; 
-			font-family:Sans-serif;
-			line-height: 1.5em;
-		}
+			body {
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+			
+			header {
+				background: #ccc;
+				height: 100px;
+			}
+			
+			header h1 {
+				margin: 0;
+				padding-top: 15px;
+			}
+			
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+			
+			nav {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 230px;
+				margin-left: -230px;
+				background: #eee;
+			}
+			
+			footer {
+				clear: left;
+				width: 100%;
+				background: #ccc;
+				text-align: center;
+				padding: 4px 0;
+			}
+	
+			#wrapper {
+				overflow: hidden;
+			}
+						
+			#content {
+				margin-right: 230px; /* Same as 'nav' width */
+			}
+			
+			.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
 		
-		#nav{
-			position: absolute;
-			top: 0;
-			bottom: 0; 
-			right: 0;
-			width: 230px; /* Width of navigation frame */
-			height: 100%;
-			overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
-			background: #eee;
-		}
+			p {
+				color: #555;
+			}
+	
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			nav ul a {
+				color: darkgreen;
+				text-decoration: none;
+			}
 		
-		main{
-			position: fixed;
-			top: 0; 
-			left: 0;
-			right: 230px; /* Set this to the width of the navigation frame */
-			bottom: 0;
-			overflow: auto; 
-			background: #fff;
-		}
-		
-		.innertube{
-			margin: 15px; /* Provides padding for the content */
-		}
-		
-		p {
-			color: #555;
-		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		nav ul a {
-			color: darkgreen;
-			text-decoration: none;
-		}
-				
-		/*IE6 fix*/
-		* html body{
-			padding: 0 230px 0 0; /* Set the second value to the width of the navigation frame */
-		}
-		
-		* html main{ 
-			height: 100%; 
-			width: 100%; 
-		}
-
 		</style>
 		
 		<script type="text/javascript">
@@ -94,7 +103,11 @@ setTimeout("location.href='https://bcan.kro.kr/mcjeserver/helps/1/pv'",1000);
     // 모바일이 아니면 실행될 코드 들어가는 곳
 }
 </script>
-				
+		<header>
+			<div class="innertube">
+				<h1>[#1] 서버에 접속하기</h1>
+			</div>
+		</header>	
 		<main>
 			<div class="innertube">
 			
@@ -108,7 +121,6 @@ setTimeout("location.href='https://bcan.kro.kr/mcjeserver/helps/1/pv'",1000);
 			
 		<nav id="nav">
 			<div class="innertube">
-			<h2>서버에 접속하기</h2>
 			<h3>영상 목록</h3>
 			<ul>
 				<li><a href="#">준비중입니다.</a></li>
