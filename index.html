@@ -157,49 +157,7 @@ img {vertical-align: middle;}
 }
 		</style>
 		
-		
-		
-		<script type="text/javascript">
-		$(document).ready(function() {
-			var status = $('#status_message');
-			if(window.location.href.indexOf('error=loginfailed') >= 0)
-				$('<div/>').text('Login Failed ').appendTo(status);
-			if(window.location.href.indexOf('error=verifyfailed') >= 0)
-				$('<div/>').text('Password Verify Error ').appendTo(status);
-			if(window.location.href.indexOf('error=registerfailed') >= 0)
-				$('<div/>').text('Registration failed (bad passcode?) ').appendTo(status);
-			$('form')[0].setAttribute('action', config.url.login);
-			$('form')[1].setAttribute('action', config.url.register);
-			document.forms['login'].elements['j_username'].focus();
-		});
-		
-		$(function(){
-            $('form[name=register]').submit(function(){
-                $.post($(this).attr('action'), $(this).serialize(), function(json) {
-                    if(json.result == 'success')
-                    	window.location = 'index.html';
-                    else
-                    	window.location = 'index.html?error=' + json.result;
-                }, 'json');
-                return false;
-            });
-        });
-
-		$(function(){
-            $('form[name=login]').submit(function(){
-                $.post($(this).attr('action'), $(this).serialize(), function(json) {
-                    if(json.result == 'success')
-                    	window.location = 'index.html';
-                    else
-                    	window.location = 'index.html?error=' + json.result;
-                }, 'json');
-                return false;
-            });
-        });
-	</script>
-		
-		
-		
+	
 		
 		
 	</head>
