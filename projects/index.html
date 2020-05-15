@@ -1,99 +1,102 @@
+ <!DOCTYPE html>
 <html>
-<head>
-<title>BlackCatAssociatesNetwork</title>
-    <link rel="shortcut icon" href="/files/bcan.png" type="image/png">
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>프로젝트들 | BlackCatAssociatesNetwork</title>
+		<link rel="shortcut icon" href="/files/bcan.png" type="image/png">
 		<style type="text/css">
-			body {
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			height: 100%; 
-			max-height: 100%; 
-			font-family:Sans-serif;
-			line-height: 1.5em;
-		}
-		
-		#header {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 350px; 
-			overflow: hidden; /* Disables scrollbars on the header frame. To enable scrollbars, change "hidden" to "scroll" */
-			background: #7A010E;
-		}
-		
-		#nav {
-			position: absolute; 
-			top: 100px; 
-			left: 0; 
-			bottom: 0;
-			width: 230px;
-			overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
-			background: #A20617; 		
-		}
-		
-		#logo {
-			padding:10px;
-		}
-		
-		main {
-			position: fixed;
-			top: 100px; /* Set this to the height of the header */
-			left: 230px; 
-			right: 0;
-			bottom: 0;
-			overflow: auto; 
-			background: #fff;
-		}
-		
-		.innertube {
-			margin: 15px; /* Provides padding for the content */
-		}
-		
-		p {
-			color: #555;
-		}
+			html, #page { padding:0; margin:0;}
+			body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;} 
+			h1, h2, h3, h4, h5, h6 {color:darkred;}
+			#page { background:#fff;}
+			#header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+						
+			/* Logo */
+			#logo { padding:0; width:auto; float:left;}
+			#logo h1 a, h1 a:hover { color:darkred; text-decoration:none;}
+			#logo h1 span { color:#f8dbdb;}
 
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		nav ul a {
-			color: white;
-			text-decoration: none;
-		}
-				
-		/*IE6 fix*/
-		* html body{
-			padding: 100px 0 0 230px; /* Set the first value to the height of the header and last value to the width of the nav */
-		}
-		
-		* html main{ 
-			height: 100%; 
-			width: 100%; 
-		}
-		
+			/* Header */
+			#header { background:#fff; }
+			#header-inner { margin:0 auto; padding:0; width:970px;}
+			
+			/* Feature */
+			.feature { background:red;padding:18px;}
+			.feature-inner { margin:auto;width:970px; }
+			.feature-inner h1 {color:#f8dbdb;font-size:32px;}
+			
+			/* Menu */
+			#top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+			#top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+			#top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+			#top-nav ul li a { display:block; margin:0; padding:8px 20px; color:red; text-decoration:none;}
+			#top-nav ul li.active a, #top-nav ul li a:hover { color:#f8dbdb;}
+			
+			/* Content */
+			#content-inner { margin:0 auto; padding:10px 0; width:970px;background:#fff;}
+			#content #contentbar { margin:0; padding:0; float:right; width:760px;}
+			#content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+			#content #sidebar { padding:0; float:left; width:200px;}
+			#content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+			#content #sidebar .widget h3 a { text-decoration:none;}
+			#content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+			#content #sidebar .widget ul li { margin:0;}
+			#content #sidebar .widget ul li { padding:4px 0; width:185px;}
+			#content #sidebar .widget ul li a { color:red; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+			#content #sidebar .widget ul li a:hover { color:#f8dbdb; font-weight:bold; text-decoration:none;}
+			
+			/* Footerblurb */
+			#footerblurb { background:#f8dbdb;color:red;}
+			#footerblurb-inner { margin:0 auto; width:922px; padding:24px;}
+			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+			
+			/* Footer */
+			#footer { background:#fff;}
+			#footer-inner { margin:auto; text-align:center; padding:12px; width:922px;}
+			#footer a {color:red;text-decoration:none;}
+			
+			/* Clear both sides to assist with div alignment  */
+			.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+			
 		</style>
-	
-	
-</head>
-		
-	<body>		
+	</head>
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="header-inner">	
+					<div id="logo">
+						
 
-		<header id="header">
-			<div id="logo">
-                              <a href="http://bcan.kro.kr"><img src="/files/bcansitelogo.png"/></a>
+                                                                   <!-- 로고 --!>
+                                    <a href="https://bcan.kro.kr"><img src="files/bcansitelogo.png"/></a>
+
+
+					</div>
+					<div id="top-nav">
+						<ul>
+						<li><a href="https://bcan.kro.kr/">홈</a></li>
+						<li><a href="https://bcan.kro.kr/projects">프로젝트들</a></li>
+						<li><a href="https://bcan.kro.kr/info">단체 정보</a></li>
+						</ul>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</header>
+			<div class="feature">
+				<div class="feature-inner">
+				<h1>프로젝트들</h1>
+				</div>
 			</div>
-		</header>
+		
+	
+			<div id="content">
+				<div id="content-inner">
 				
-		<main>
-			<div class="innertube">
-				
-				<h1>PROJECTS</h1>
+					<main id="contentbar">
+						<div class="article">
+<div id="p1"></div>
+<h3>프로젝트 목록</h3>
+
 				<p>저희 구성원들의 완료된, 또는 진행중인 프로젝트들을 보실 수 있습니다.</p>
 <ul>
    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">뿌뀨런</font></font></h3>
@@ -107,17 +110,42 @@
 				<p><span style="color:#ffffff;"><span style="background-color:#000000;">분류: 서버, 마인크레프트, JE</span></span></p>
 				<input type="button" value="공식 사이트" onClick="window.open('https://bcan.kro.kr/mcjeserver')">
 
+						</div>
+					</main>
+					
+					<nav id="sidebar">
+						<div class="widget">
+							<h3>빠른 페이지 이동</h3>
+							<ul>
+							<li><a href="#p1">최신소식 빠르게 보기</a></li>
+                                                        <li><a href="#p2">디스코드 방문하기</a></li>
+							</ul>
+						</div>
+					</nav>
+					
+					<div class="clr"></div>
+				</div>
 			</div>
-		</main>
-
-		<nav id="nav">
-			<div class="innertube">
-				<ul>
-					<li><a href="https://bcan.kro.kr">홈</a></li>
-					<li><a href="https://bcan.kro.kr/projects">프로젝트들</a></li>
-					<li><a href="https://bcan.kro.kr/other">다른 사이트</a></li>
-				</ul>
+		
+			<div id="footerblurb">
+				<div id="footerblurb-inner">
+				
+					<div class="column">
+						<h3><span>연락하기</span></h3>
+						<a href="mailto:lee25802733@gmail.com">공식 이메일</a>
+                                                <a href="mailto:blackcats4567@naver.com">창설자 이메일</a>
+                                                <a href="https://bcan.kro.kr">웹사이트</a>
+					</div>	
+					
+					<div class="clr"></div>
+				</div>
 			</div>
-		</nav>	
+			<footer id="footer">
+				<div id="footer-inner">
+					<p>Copyright 2020 <a href="#">BlackCatAssociatesNetwork</a> &#124; <a href="https://bcan.kro.kr/terms">이용약관</a> &#124; <a href="https://bcan.kro.kr/policy">개인정보처리방침</a></p>
+					<div class="clr"></div>
+				</div>
+			</footer>
+		</div>
 	</body>
 </html>
