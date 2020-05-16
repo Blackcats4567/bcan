@@ -1,0 +1,136 @@
+
+<html>
+<head>
+<title>마크JE서버 - BlackCatAssociatesNetwork</title>
+    <link rel="shortcut icon" href="/files/bcan.png" type="image/png">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		#header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 350px; 
+			overflow: hidden; /* Disables scrollbars on the header frame. To enable scrollbars, change "hidden" to "scroll" */
+			background: #7A010E;
+		}
+		
+		#nav {
+			position: absolute; 
+			top: 100px; 
+			left: 0; 
+			bottom: 0;
+			width: 230px;
+			overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
+			background: #A20617; 		
+		}
+		
+		#logo {
+			padding:10px;
+		}
+		
+		main {
+			position: fixed;
+			top: 100px; /* Set this to the height of the header */
+			left: 230px; 
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background: #fff;
+		}
+		
+		.innertube {
+			margin: 15px; /* Provides padding for the content */
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: white;
+			text-decoration: none;
+		}
+				
+		/*IE6 fix*/
+		* html body{
+			padding: 100px 0 0 230px; /* Set the first value to the height of the header and last value to the width of the nav */
+		}
+		
+		* html main{ 
+			height: 100%; 
+			width: 100%; 
+		}
+		
+		</style>
+	
+	
+</head>
+		
+	<body>		
+<script>
+	function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+	if (isMobile()) {
+    // 모바일이면 실행될 코드 들어가는 곳
+setTimeout("location.href='https://bcan.kro.kr/mcjeserver/pv'",1000);
+} else {
+    // 모바일이 아니면 실행될 코드 들어가는 곳
+}
+</script>
+		<header id="header">
+			<div id="logo">
+                              <a href="https://bcan.kro.kr"><img src="files/bcansitelogo.png"/></a>
+			</div>
+		</header>
+				
+		<main>
+			<div class="innertube">
+				
+				<h1>서버 상태(마인리스트)</h1>
+        <a href="https://minelist.kr/servers/8993"><img src="https://minelist.kr/servers/8993/banner/modern.png" /></a>
+				<br>
+				<button type="button" onclick="location.href='https://bcan.kro.kr/mcjeserver/helps' ">서버 도움말로 이동하기</button>
+				<button type="button" onclick="location.href='https://cafe.naver.com/minecraftsv' ">서버 카페로 이동하기</button>
+				<br>
+				<h1>서버 최신 소식</h1>
+				<br>
+				<h2>새로운 게임! 축구/체스</h2>
+				<img src="files/2020-03-17_20.53.56.png" width="700" height="450" alt="이미지" />
+				<p>재미있게 플레이하세요!</p>
+			</div>
+		</main>
+
+		<nav id="nav">
+			<div class="innertube">
+				<ul>
+					<h3>웹사이트</h3>
+					<li><a href="https://bcan.kro.kr">홈</a></li>
+					<li><a href="https://bcan.kro.kr/projects">프로젝트들</a></li>
+					<li><a href="https://bcan.kro.kr/other">다른 사이트</a></li>
+					<h3>마크JE서버</h3>
+					<li><a href="https://bcan.kro.kr/mcjeserver">홈</a></li>
+					<li><a href="https://bcan.kro.kr/mcjeserver/helps">도움말 목록</a></li>
+					<li><a href="http://mc.bcan.kro.kr/">브라우저로 서버 접속</a></li>
+				</ul>
+			</div>
+		</nav>	
+	</body>
+</html>
