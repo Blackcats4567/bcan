@@ -5,48 +5,6 @@
 		<title>홈 | BlackCatAssociatesNetwork</title>
 		<link rel="shortcut icon" href="/files/bcan.png" type="image/png">
 		
-		<script language="JavaScript">
-		const docStyle = document.documentElement.style
-const aElem = document.querySelector('a')
-const boundingClientRect = aElem.getBoundingClientRect()
-
-aElem.onmousemove = function(e) {
-
-	const x = e.clientX - boundingClientRect.left
-	const y = e.clientY - boundingClientRect.top
-	
-	const xc = boundingClientRect.width/2
-	const yc = boundingClientRect.height/2
-	
-	const dx = x - xc
-	const dy = y - yc
-	
-	docStyle.setProperty('--rx', `${ dy/-1 }deg`)
-	docStyle.setProperty('--ry', `${ dx/10 }deg`)
-	
-}
-
-aElem.onmouseleave = function(e) {
-	
-	docStyle.setProperty('--ty', '0')
-	docStyle.setProperty('--rx', '0')
-	docStyle.setProperty('--ry', '0')
-	
-}
-
-aElem.onmousedown = function(e) {
-	
-	docStyle.setProperty('--tz', '-25px')
-	
-}
-
-document.body.onmouseup = function(e) {
-	
-	docStyle.setProperty('--tz', '-12px')
-	
-}
-		</script>
-		
 		
 		<style type="text/css">
 			html, #page { padding:0; margin:0;}
@@ -316,6 +274,7 @@ function showSlides(n) {
 <iframe src="https://discordapp.com/widget?id=396267818196271124&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
 
 <p>저희 디스코드 커뮤니티에서 많은 멤버들과 같이 활동해보세요!<br><s>좀 시끄러울 수 있으니 알림 끄시는걸 추천합니다</s></p>
+<button class="button button3"  onclick="location.href='https://bcan.kro.kr/discord/join' ">Join Our Discord Server | 디스코드 참여하기</button>
 <a href="https://bcan.kro.kr/discord/join" data-title="Join Our Discord Server | 디스코드 참여하기"></a>
 </center>
 						</div>
