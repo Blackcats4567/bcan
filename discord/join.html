@@ -1,0 +1,24 @@
+<title>디스코드 참여하기</title>
+<script language="JavaScript">
+	
+		var SetTime = 5;		
+
+		function msg_time() {	
+			
+			ms = Math.floor(SetTime % 60) + " sec";
+			
+			var msg = "이동하기까지 남은 시간: <font color='blue'>" + ms + "</font> .";
+			
+			document.all.ViewTimer.innerHTML = msg;		
+					
+			SetTime--;					
+			
+			if (SetTime < 0) {			
+				
+				clearInterval(tid);		
+				window.location.href = 'https://discord.gg/rBnB2xr';
+			}
+			
+		}
+
+		window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };
