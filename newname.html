@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="kr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>팀명 의견</title>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+
+</head>
+
+<body>
+<h2>새로운 팀명 의견</h2>
+<p>(주의: 개인정보,성적 용어,욕설이 포함된 이름을 등록하지 않도록 주의해주세요)<br>팀명이 변경되지 않을 수도 있습니다.</p>
+
+  <div class="controls">
+
+ <input type="text" id="name" placeholder="새로운 팀명">
+
+        <br>
+
+<input type="text" id="score" placeholder="추천하는 이유">
+
+      <br>
+
+      <button onclick="writeUserData()" id="save">의견 보내기</button>
+
+  </div>
+
+  <br>
+
+  <div id="loading">[불러오는 중입니다]</div>
+
+  <div id="output" style="border: 1px  blue;"></div>
+
+
+<script>
+
+    // Initialize Firebase
+
+  var config = {
+
+    apiKey: "AIzaSyBuxkZOBls1MokQPy4h49KKGv1hJ3UYVpI",
+
+    databaseURL: "https://test-f5423.firebaseio.com/",
+
+    projectId: "test-f5423" 
+
+  };
+
+ 
+
+  firebase.initializeApp(config);
+
+  firebase.database.INTERNAL.forceWebSockets();
+
+  var database = firebase.database();
+
+// init elements
+
+  var $name, $scope, $output, id, $preloader;
+
+  $name = document.getElementById('name');
+
+  $score = document.getElementById('score');
+
+  $output = document.getElementById('output');
+
+  $preloader = document.getElementById('loading');
+
+  
+
+  getUserData();
+
+  
+
+
+
+
+function writeUserData() {
+
+  // generate id for database record
+
+  id =  Date.now();
+
+  if ($name.value.length === 0 || $score.value === 0) {
+
+    alert('도배하지 마세요!');
+
+    return;
+
+  }
+
+  // sava data
+
+  database.ref('svd/' + id.toString()).set({
+
+    username: $name.value,
+
+    score: $score.value
+
+  });
+
+  $score.value = '';
+  $name.value = '';
+
+  getUserData();
+
+}
+
+
+function getUserData() {
+
+  database.ref('svd/').once('value').then(function(snapshot) {
+
+    $preloader.style.display = 'none';
+
+    var data = snapshot.val();
+
+    // clear output
+
+    $output.innerHTML = '';
+
+    for (var property in data) {
+
+      // get object with name and score
+
+      var objectWithData = data[property + ''];
+
+      // get name
+
+      var name = objectWithData['username'];
+
+      // create h1 with name
+
+      var nameElem = document.createElement('span');
+
+      nameElem.style.color = "indigo";
+
+      nameElem.innerHTML = name;
+
+      // append h1 to wrap
+
+      $output.appendChild(nameElem);
+
+      // same for the score
+
+       // get name
+
+       
+
+      var score = objectWithData['score'];
+
+      var scoreElem = document.createElement('span');
+
+      scoreElem.innerHTML = " 을 추천하는 이유: " + score + "<br>";
+
+      scoreElem.style.color = "black";
+
+      $output.appendChild(scoreElem);
+
+    }
+
+});
+
+}
+
+</script> 
+
+</body>
+
+</html> 
