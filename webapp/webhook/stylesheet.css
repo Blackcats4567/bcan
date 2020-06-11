@@ -5,11 +5,5 @@
 }
 
 body {
-      background-image: url('back.png');
-      background-size: cover;
-      min-height:100vh;
-      margin:0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-image: url('https:/bcan.kro.kr/webapp/webhook/back.png');
 }
