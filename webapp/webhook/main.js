@@ -1,7 +1,3 @@
-/*   
-  Project by Zua 
-  https://github.com/thatziv/webhook 
-*/
 $(function(){
     $('#btn').click(function(){
         var link = $('#link').val();
@@ -10,7 +6,7 @@ $(function(){
         var avatar = $('#avatar').val();
         if (link==null || link=="",content==null || content=="")
         {
-            alert("Please Fill Out All The Fields");
+            alert("빈칸이 있습니다");
             return false;
         }
         $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
