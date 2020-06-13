@@ -4,6 +4,11 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
 body {
   background-color: #606A84;
   text-align: center;
